@@ -1,3 +1,4 @@
 ---
 dependencies:
-  - https://github.com/ultral/docker
+  - name: ansible-docker-centos
+    src: https://github.com/ultral/ansible-docker-centos
