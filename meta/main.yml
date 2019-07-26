@@ -1,9 +1,9 @@
 ---
 ---
 galaxy_info:
-  role_name: ansible_docker_centos
+  role_name: ansible_development
   author: Lev Goncharov
-  description: Ansible role for installing docker on CentOS
+  description: Ansible role for creating and testing Ansible roles on centos
 
   license: MIT
 
@@ -22,4 +22,4 @@ galaxy_info:
         - 7.6
 
 dependencies:
-  - ultral.ansible_docker_centos
+  - ultral.ansible_development
