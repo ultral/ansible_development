@@ -1,0 +1,26 @@
+---
+namespace: "ultral"
+name: "ansible_development"
+version: "0.1"
+description: "Ansible role for preparing ansible development environment on CentOS"
+
+authors:
+  - "Lev Goncharov <lev@goncharov.xyz>"
+
+repository: "https://github.com/ultral/ansible_development"
+documentation: "https://github.com/ultral/ansible_development/blob/master/README.md"
+homepage: "https://github.com/ultral/ansible_development"
+issues: "https://github.com/ultral/ansible_development/issues"
+
+dependencies: {}
+
+readme: "README.md"
+license: "MIT"
+license_file: "LICENSE"
+
+tags:
+  - "docker"
+  - "centos"
+  - "molecule"
+  - "ansible"
+  - "testing"

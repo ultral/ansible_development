@@ -1,4 +1,25 @@
 ---
+---
+galaxy_info:
+  role_name: ansible_docker_centos
+  author: Lev Goncharov
+  description: Ansible role for installing docker on CentOS
+
+  license: MIT
+
+  min_ansible_version: 1.2
+
+  galaxy_tags:
+    - docker
+    - centos
+    - molecule
+    - ansible
+    - testing
+
+  platforms:
+    - name: Centos
+      versions:
+        - 7.6
+
 dependencies:
-  - name: ansible-docker-centos
-    src: https://github.com/ultral/ansible-docker-centos
+  - ultral.ansible_docker_centos
