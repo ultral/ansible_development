@@ -10,7 +10,7 @@ ansible_dev__software:
   - libselinux-python
   - gcc
 
-ansible_dev_pip_modules:
+ansible_dev__pip_modules:
   - molecule
   - docker
   - testinfra>=3.0.5
