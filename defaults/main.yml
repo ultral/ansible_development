@@ -1,5 +1,5 @@
 ---
-ansible_dev_software:
+ansible_dev__software:
   - ansible
   - ansible-lint
   - python
@@ -10,7 +10,7 @@ ansible_dev_software:
   - libselinux-python
   - gcc
 
-ansible_pip_modules:
+ansible_dev_pip_modules:
   - molecule
   - docker
   - testinfra>=3.0.5

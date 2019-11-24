@@ -1,15 +1,17 @@
 ---
 - name: ansible dev software are installed
   yum:
-    name: "{{ ansible_dev_software }}"
+    name: "{{ ansible_dev_dev_software }}"
     state: present
 
 - name: setuptools latest verstion is installed
   pip:
-    name: setuptools
+    name:
+      - setuptools
+      - wheel
     state: latest
 
 - name: install pip modules
   pip:
-    name: "{{ ansible_pip_modules }}"
+    name: "{{ ansible_dev_pip_modules }}"
     state: present
