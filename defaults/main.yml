@@ -11,6 +11,6 @@ ansible_dev__software:
   - gcc
 
 ansible_dev_pip_modules:
-  - molecule[docker]
+  - molecule
   - docker
   - testinfra>=3.0.5
