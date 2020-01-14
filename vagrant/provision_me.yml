@@ -1,0 +1,7 @@
+---
+- name: ansible dev vm
+  hosts: all
+  become: true
+  become_user: root
+  roles:
+    - ansible_development

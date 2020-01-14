@@ -9,9 +9,17 @@
     name:
       - setuptools
       - wheel
+    executable: pip3
     state: latest
 
-- name: install pip modules
+- name: pip modules are installed
   pip:
     name: "{{ ansible_dev__pip_modules }}"
+    executable: pip3
     state: present
+
+- name: PATH caontains /usr/local/bin
+  copy:
+    dest: /etc/profile.d/local.sh
+    content: export PATH=${PATH}:/usr/local/bin
+    mode: 0755

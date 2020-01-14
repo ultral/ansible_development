@@ -2,15 +2,13 @@
 ansible_dev__software:
   - ansible
   - ansible-lint
-  - python
-  - python-pip
-  - gcc
-  - python-devel
-  - openssl-devel
-  - libselinux-python
+  - python3
+  - python3-pip
+  - python3-devel
   - gcc
 
 ansible_dev__pip_modules:
+  - setuptools
+  - wheel
   - molecule
   - docker
-  - testinfra>=3.0.5
