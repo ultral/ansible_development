@@ -1,14 +1,12 @@
 ---
 ansible_dev__software:
-  - ansible
-  - ansible-lint
   - python3
   - python3-pip
   - python3-devel
   - gcc
 
 ansible_dev__pip_modules:
-  - setuptools
-  - wheel
+  - ansible
+  - ansible-lint
   - molecule
   - docker
