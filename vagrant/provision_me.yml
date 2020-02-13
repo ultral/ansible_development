@@ -4,4 +4,4 @@
   become: true
   become_user: root
   roles:
-    - ansible_development
+    - role: ansible_development

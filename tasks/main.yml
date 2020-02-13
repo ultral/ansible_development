@@ -6,9 +6,7 @@
 
 - name: setuptools latest verstion is installed
   pip:
-    name:
-      - setuptools
-      - wheel
+    name: setuptools
     executable: pip3
     state: latest
 
