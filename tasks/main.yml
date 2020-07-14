@@ -1,22 +1,31 @@
 ---
-- name: ansible dev software are installed
-  yum:
-    name: "{{ ansible_dev__software }}"
+- name: install ansible dev software
+  package:
+    name: "{{ ansible_development__software }}"
     state: present
+  retries: 5
+  delay: 2
 
-- name: setuptools latest verstion is installed
+- name: upgrade setuptools pip module
   pip:
-    name: setuptools
+    name: setuptools>=20.1.1
+    state: present
     executable: pip3
-    state: latest
+  retries: 5
+  delay: 2
 
 - name: pip modules are installed
   pip:
-    name: "{{ ansible_dev__pip_modules }}"
-    executable: pip3
+    name: "{{ ansible_development__pip_module }}"
     state: present
+    executable: pip3
+  loop_control:
+    loop_var: ansible_development__pip_module
+  loop: "{{ ansible_development__pip_modules }}"
+  retries: 5
+  delay: 2
 
-- name: PATH caontains /usr/local/bin
+- name: Configure add /usr/local/bin to the PATH
   copy:
     dest: /etc/profile.d/local.sh
     content: export PATH=${PATH}:/usr/local/bin
