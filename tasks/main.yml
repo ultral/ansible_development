@@ -9,9 +9,9 @@
 
 - name: setuptools latest verstion is installed
   pip:
-    name: setuptools
+    name: setuptools>=20.1.1
+    state: present
     executable: pip3
-    state: latest
   retries: 10
   delay: 5
 
