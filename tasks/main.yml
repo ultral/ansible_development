@@ -3,18 +3,25 @@
   yum:
     name: "{{ ansible_dev__software }}"
     state: present
+  retries: 10
+  delay: 5
+
 
 - name: setuptools latest verstion is installed
   pip:
     name: setuptools
     executable: pip3
     state: latest
+  retries: 10
+  delay: 5
 
 - name: pip modules are installed
   pip:
     name: "{{ ansible_dev__pip_modules }}"
     executable: pip3
     state: present
+  retries: 10
+  delay: 5
 
 - name: PATH caontains /usr/local/bin
   copy:
