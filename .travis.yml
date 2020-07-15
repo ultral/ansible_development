@@ -8,6 +8,7 @@ install:
   - pip install ansible ansible-lint molecule[docker]
 
 script:
+  - ansible-galaxy install ultral.ansible_docker_centos
   - molecule --debug lint
   - molecule --debug syntax
 
