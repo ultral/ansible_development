@@ -9,4 +9,5 @@ ansible_dev__pip_modules:
   - ansible
   - ansible-lint
   - molecule
+  - molecule-docker
   - docker
