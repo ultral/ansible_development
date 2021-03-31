@@ -5,7 +5,7 @@ python:
   - "3.6"
 
 install:
-  - pip install ansible ansible-lint molecule[docker]
+  - pip install ansible ansible-lint yamllint molecule molecule-docker docker
 
 script:
   - ansible-galaxy install ultral.ansible_docker_centos
