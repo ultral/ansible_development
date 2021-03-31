@@ -1,8 +1,40 @@
 ---
+- name: install EPEL Repository (CentOS)
+  package:
+    name: epel-release
+    state: present
+  retries: 30
+  delay: 5
+  register: result
+  until: result is not failed
+  when:
+    - ansible_distribution == "CentOS"
+
+- name: install EPEL Repository (Oracle Linux)
+  package:
+    name: oracle-epel-release-el{{ ansible_distribution_major_version }}
+    state: present
+  retries: 30
+  delay: 5
+  register: result
+  until: result is not failed
+  when:
+    - ansible_distribution == "OracleLinux"
+
 - name: Install ansible software required for development ansible roles
   yum:
     name: "{{ ansible_dev__software }}"
     state: present
+  retries: 30
+  delay: 5
+  register: result
+  until: result is not failed
+
+- name: upgrade pip module
+  pip:
+    name: pip>=21.0.1
+    state: present
+    executable: pip3
   retries: 30
   delay: 5
   register: result

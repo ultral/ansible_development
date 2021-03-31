@@ -1,13 +1,18 @@
 ---
 ansible_dev__software:
+  - python2-pip
   - python3
   - python3-pip
   - python3-devel
   - gcc
 
+ansible_dev__ansible_version: "2.9.18"
+ansible_dev__ansible_lint_version: "5.0.1"
+ansible_dev__molecule_version: "3.2.3"
+
 ansible_dev__pip_modules:
-  - ansible
-  - ansible-lint
-  - molecule
+  - ansible=={{ ansible_dev__ansible_version }}
+  - ansible-lint=={{ ansible_dev__ansible_lint_version }}
+  - molecule=={{ ansible_dev__molecule_version }}
   - molecule-docker
   - docker
